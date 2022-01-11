@@ -4,12 +4,6 @@ branches:
 - master
 name: Production Deploy
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
       with:
         server: ftp://144.217.146.253
         username: kidscliics
