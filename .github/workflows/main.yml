@@ -5,7 +5,7 @@
 #name: Production Deploy
 #jobs:
       #with:
-        #server: ftp://144.217.146.253
+        #server: http://144.217.146.253:8880/
         #username: kidscliics
         #password: ${{ secrets.ftp_password }}
 
