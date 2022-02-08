@@ -17,4 +17,4 @@ jobs:
         server: www.kidsclinic.co.in
         username: ${{ secrets.ftp_username}}
         password: ${{ secrets.ftp_password}}
-        server-dir: /httpdocs/demo-project/
+        server-dir: www.kidsclinic.co.in/demo-project/
