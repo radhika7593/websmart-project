@@ -1,9 +1,27 @@
-on: 
-push:
-branches:
-- master
-name: Production Deploy
+#on: 
+#push:
+#branches:
+#- master
+#name: Production Deploy
+#jobs:
+      #with:
+        #server: ftp://144.217.146.253
+        #username: kidscliics
+        #password: ${{ secrets.ftp_password }}
+
+
+on: push
+name: 🚀 Deploy website on push
 jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ftp://144.217.146.253
         username: kidscliics
